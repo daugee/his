@@ -1,15 +1,7 @@
-<html>
-<head>
-<title>This is the dhis connector</title>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
-</head>
-<body>
-<h1>This is the homepage</h1>
-
 
 <?php
 
-$url = 'http://apps.dhis2.org/demo/api/charts.json?paging=false';
+$url = 'http://apps.dhis2.org/demo/api/mapViews.json?paging=false';
 
 
 $username = 'admin';
@@ -36,7 +28,7 @@ $data=(json_encode($output,true));
 json=jQuery.parseJSON(my_var);
 	$(document).ready(function() {
 	 console.log(jQuery.type(json));
-            $(json.charts).each(function(i, data){	
+            $(json.mapViews).each(function(i, data){	
                 var id = data.id;
                 var link= data.href;
                 
@@ -47,10 +39,9 @@ json=jQuery.parseJSON(my_var);
                                 var anchor = $("<iframe></iframe>").attr("src",data.href+'/data.html').append("<br />"); 				  
 									 
                                         
-                                        $("#charts").append(anchor).load();
+                                        $("#maps").append(anchor).load();
 
-                               
-              //$("#maps").attr("src", data.href+'/data').append("<br />").load();
+             // $("#reportTables").append("<a href='"+data.href+"/data.pdf'>"+data.name+"| PDF | </a>").append("<br />");
               //var anchor = $("<a class='blue' id='"+theId+"' onclick='javascript:printIt(id)'></a>").append(data.href).append("<br />"); 
 		//$("#name").append(anchor);							  
 
@@ -61,12 +52,3 @@ json=jQuery.parseJSON(my_var);
          }); 
 </script>
 
-
-<div id="name">
-</div>
-<div id="charts">
-</div>
-
-    
-</body>
-</html>

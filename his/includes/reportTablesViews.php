@@ -1,15 +1,9 @@
-<html>
-<head>
-<title>This is the dhis connector</title>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
-</head>
-<body>
-<h1>This is the homepage</h1>
+
 
 
 <?php
 
-$url = 'http://apps.dhis2.org/demo/api/charts.json?paging=false';
+$url = 'http://apps.dhis2.org/demo/api/reportTables.json?paging=false';
 
 
 $username = 'admin';
@@ -36,7 +30,7 @@ $data=(json_encode($output,true));
 json=jQuery.parseJSON(my_var);
 	$(document).ready(function() {
 	 console.log(jQuery.type(json));
-            $(json.charts).each(function(i, data){	
+            $(json.reportTables).each(function(i, data){	
                 var id = data.id;
                 var link= data.href;
                 
@@ -47,7 +41,7 @@ json=jQuery.parseJSON(my_var);
                                 var anchor = $("<iframe></iframe>").attr("src",data.href+'/data.html').append("<br />"); 				  
 									 
                                         
-                                        $("#charts").append(anchor).load();
+                                        $("#reportsViews").append(anchor).load();
 
                                
               //$("#maps").attr("src", data.href+'/data').append("<br />").load();
@@ -62,11 +56,4 @@ json=jQuery.parseJSON(my_var);
 </script>
 
 
-<div id="name">
-</div>
-<div id="charts">
-</div>
 
-    
-</body>
-</html>

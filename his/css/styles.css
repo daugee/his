@@ -18,6 +18,12 @@ bottom:0px;
 margin-left: 5px;
 width:880px;
 }
+.chart {
+  width: 800px;
+  height: 500px;
+  border: 1px solid #ddd;
+  margin: 30px;
+}
 img
 {
 border: 0px;

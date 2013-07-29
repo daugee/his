@@ -8,8 +8,19 @@ class Welcome extends CI_Controller {
              
               $this->load->helper('url');
               $this->load->library('javascript');
-              
+              $this->load->library('pagination');
+
+                $config['base_url'] = 'http://localhost/his/index.php/welcome/blog';
+                $config['total_rows'] = 200;
+                $config['per_page'] = 20; 
+
+                $this->pagination->initialize($config); 
+
+                echo $this->pagination->create_links();
               }
+            
+
+
 	public function index()
 	{
 		$this->load->view('index');

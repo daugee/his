@@ -1,12 +1,4 @@
 
-<html>
-<head>
-<title>This is the dhis connector</title>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
-</head>
-<body>
-<h1>This is the homepage</h1>
-
 <?php
 
 $url = 'http://test.hiskenya.org/api/reports.json?paging=false';
@@ -44,7 +36,7 @@ json=jQuery.parseJSON(my_var);
 				FACILITY_CODE.push(data.png);
 				FACILITY_LEVEL.push(data.href);
 				FACILITY_ID.push(data.id);
-              $("#reports").append("<a href='"+data.href+"/data.pdf'>"+data.name+"</a>").append("<br />");
+              $("#reports").append("<a href='"+data.href+"/data.pdf'>"+data.name+"|PDF| </a>").append("<a href='"+data.href+"/data.xls'>XLS</a>").append("<br />");
               //var anchor = $("<a class='blue' id='"+theId+"' onclick='javascript:printIt(id)'></a>").append(data.href).append("<br />"); 
 		//$("#name").append(anchor);							  
 

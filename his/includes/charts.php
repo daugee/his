@@ -1,11 +1,3 @@
-<html>
-<head>
-<title>This is the dhis connector</title>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
-</head>
-<body>
-<h1>This is the homepage</h1>
-
 
 <?php
 
@@ -62,11 +54,4 @@ json=jQuery.parseJSON(my_var);
 </script>
 
 
-<div id="name">
-</div>
-<div id="charts">
-</div>
 
-    
-</body>
-</html>
