@@ -103,13 +103,37 @@ class Welcome extends CI_Controller {
         public function redirect($page)
             {
     $this->load->model('admin_model');
-        if($page=='reg_company')
+        if($page=='reg_member')
         {
             $data=array('title'=>'membership registration');
             $data['heading']='Registration';
             $this->load->view('admin/signup_view',$data);
         }
 }
+function create_member(){
+            $this->load->library('form_validation');
+            
+            //form validation for signup
+            $this->form_validation->set_rules('name','name','trim|required');
+            $this->form_validation->set_rules('email','email','trim|required|valid_email');
+            $this->form_validation->set_rules('phone_number','phone_number','trim|required');
+            $this->form_validation->set_rules('username','username','trim|required|min_length[5]');
+            $this->form_validation->set_rules('password','password','trim|required|min_length[6]');
+            $this->form_validation->set_rules('password2','','trim|required|min_length[6]|matches[password]');
+            
+            if($this->form_validation->run()==FALSE){
+                $this->load->view('admin/signup_view');
+            }
+        
+        else
+        {    $this->load->model('admin_model');
+            $this->admin_model->create_member();
+            $data['title']='success';
+            $data['heading']='Success';
+             $this->load->view('admin/signup_success');
+        }
+        }
+
 }
 
 /* End of file welcome.php */

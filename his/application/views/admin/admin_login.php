@@ -29,7 +29,7 @@
                        <?php echo form_password('password', '');?></br> 
                   
                         <?php echo form_submit('submit',  'login');?> 
-                        <?php echo anchor('welcome/redirect/admin_login',  'create account');?> 
+                        <?php echo anchor('welcome/redirect/reg_member',  'create account');?> 
                                        
                 
                 <?php echo validation_errors('<p class="error">');?> 

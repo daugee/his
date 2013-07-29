@@ -37,7 +37,7 @@ class admin_model extends CI_Model {
     {
         $data=array(
             'username'=>$this->input->post('username'),
-            'password'=>$this->input->post('password')
+            'password'=>md5($this->input->post('password'))
         );
         
         $this->db->where($data);
@@ -56,6 +56,17 @@ class admin_model extends CI_Model {
             return $data;
         }
     }
-
+     public function create_member(){
+        $new_member_insert_data=array(
+            'name'=>  $this->input->post('name'),
+            'email'=>  $this->input->post('email'),
+            'phone_number'=>  $this->input->post('phone_number'),
+            'username'=>  $this->input->post('username'),
+            'password'=>  md5($this->input->post('password'))
+            
+        );
+        $insert= $this->db->insert('admin',$new_member_insert_data);
+        return $insert;
+    }
 }
 ?>
