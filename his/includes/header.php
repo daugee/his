@@ -9,21 +9,17 @@
 		<script type="text/javascript" src="<?php echo base_url('lib/jquery.tools.js');?>"></script>	
 		<script type="text/javascript" src="<?php echo base_url('lib/jquery.custom.js');?>"></script>
 <link rel="stylesheet" href="<?php echo base_url('css/styles.css');?>"  type="text/css" media="all"/>
-<html>
-<head>
-<title>This is the dhis connector</title>
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
-</head>
-<body>
-<h1>This is the homepage</h1>
+
 
 <?php
 
-$url = 'http://test.hiskenya.org/api/indicators.json?paging=false';
+$url = 'http://apps.dhis2.org/demo/api/indicators.json?paging=false';
 
 
-$username = 'hi4kenya';
-$password = 'Hi4kenya';
+$username = 'admin';
+$password = 'district';
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
@@ -33,7 +29,7 @@ curl_setopt($ch, CURLOPT_USERPWD, $username . ":" . $password);
 curl_setopt($ch, CURLOPT_CONNECTTIMEOUT ,0); 
 curl_setopt($ch, CURLOPT_TIMEOUT, 0);  
 $output=curl_exec($ch);
-print "error:" . curl_error($ch) . "<br />";
+print "" . curl_error($ch) . "<br />";
 $data=(json_encode($output,true));
 ?>
 

@@ -8,8 +8,8 @@
                 	<div style=" height:2px"></div>
                     
                     <div class="row">
-                        <?php include 'includes/maps.php';?>
-                     	<div class=""><div id="maps"></div></div>
+                        <?php include 'includes/reportTables.php';?>
+                     	<div class=""><div id="reportTables" class="chart"></div></div>
                         <div class="box_razd"></div>
                       	
                     </div>

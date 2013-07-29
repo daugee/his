@@ -1,7 +1,7 @@
 <?php include 'includes/connector.php';?>
 <?php include 'includes/header.php';?>
 <?php include 'includes/tab.php';?>
-<?php include 'includes/reports.php';?>
+
 <?php include 'includes/reportTables.php';?>
 <?php include 'includes/charts.php';?>
 <?php include 'includes/maps.php';?>
@@ -23,20 +23,22 @@
         
 <script type="text/javascript">
 
-var base = "http://test.hiskenya.org/";
+var base = "http://apps.dhis2.org/demo/";
 
 
 
 function setLinks() {
     
-  jQuery("#map1").attr("src", base + "api/mapViews/Om7R4Y4xSfX/data");
-  jQuery("#map2").attr("src", base + "api/mapViews/qlvRpTK44T7/data");
-  jQuery("#chart1").attr("src", base + "api/charts/fNzZOUER6vK/data");
-  jQuery("#chart2").attr("src", base + "api/charts/y4TfByS5YIz/data");
-  jQuery("#table1").load(base + "api/reportTables/MfIKCoKo3oN/data.pdf");
+  jQuery("#map1").attr("src", base + "api/mapViews/tzgP0pacw8l/data");
+  jQuery("#map2").attr("src", base + "api/mapViews/tWOaOFS3WB5/data");
+  jQuery("#chart1").attr("src", base + "api/charts/mKjgsRMJt0H/data");
+  jQuery("#chart2").attr("src", base + "api/charts/wSWxbt3TueB/data");
+  jQuery("#table1").load(base + "api/reportTables/NBt7kGTOQTb/data.pdf");
   jQuery("#table2").attr(base + "api/reportTables/NBt7kGTOQTb/data");
-  var anchor = $("<iframe></iframe>").attr("src",'http://test.hiskenya.org/api/reportTables/MfIKCoKo3oN/data.html').attr("height",780).attr("width",780).append("<br />"); 
+var anchor = $("<iframe></iframe>").attr("src",'http://apps.dhis2.org/demo/api/reportTables/NBt7kGTOQTb/data.html').attr("height",780).attr("width",780).append("<br />"); 
 $("#table1").append(anchor).load();
+var anchor = $("<iframe></iframe>").attr("src",'http://apps.dhis2.org/demo/api/reportTables/FPmvWs7bn2P/data.html').attr("height",780).attr("width",780).append("<br />"); 
+$("#table2").append(anchor).load();
  
 
 						     
@@ -68,6 +70,7 @@ jQuery(document).ready(function() {
   </ul>
   <div id="tabs-1">
    <div class="datc_comment">
+       <?php include 'includes/reports.php';?>
                               <div class="date"><img src="<?php echo base_url('images/fish_dat.gif');?>" style=" " alt="" />&nbsp;&nbsp;<a href="#"><?php echo date('l jS \of F Y h:i:s A');?></a></div>
                                <!--- <div class="bloger"><img src="<?php echo base_url('images/fish_bloger.gif');?>" style=" vertical-align:middle" alt="" />&nbsp;&nbsp;<a href="#">by John Johnson</a></div>
                                 <div class="comment"><img src="<?php echo base_url('images/fish_comment.gif');?>" style=" vertical-align:middle" alt="" />&nbsp;&nbsp;<a href="#">12 Comments </a></div>
@@ -81,8 +84,9 @@ jQuery(document).ready(function() {
   </div>
   <div id="tabs-2">
       <div id="maps"></div>
-                           <!-- <img style="padding: 5px; margin: 5px; border: 1px solid #c0c0c0; width: 400px" id="maps" />
-                            <img style="padding: 15px; margin: 15px; border: 1px solid #c0c0c0; width: 400px" id="map2" />-->
+                            <img style="padding: 5px; margin: 5px; border: 1px solid #c0c0c0; width: 400px" id="map1" />
+                            <img style="padding: 15px; margin: 15px; border: 1px solid #c0c0c0; width: 400px" id="map2" />
+  <div class="read_r"><a href="<?php echo site_url('welcome/maps');?>">more</a></div>
   </div>
   <div id="tabs-3">
      
@@ -93,14 +97,15 @@ jQuery(document).ready(function() {
                            
                                
                            
-                          <!--  <img style="padding: 15px; margin: 15px; border: 1px solid #c0c0c0;" id="chart1" />
-                            <img style="padding: 15px; margin: 15px; border: 1px solid #c0c0c0;" id="chart2" />-->
-                           
+                           <img style="padding: 15px; margin: 15px; border: 1px solid #c0c0c0;" id="chart1" class="chart"/>
+                            <img style="padding: 15px; margin: 15px; border: 1px solid #c0c0c0;" id="chart2" class="chart"/>
+     <div class="read_r"><a href="<?php echo site_url('welcome/charts');?>">more</a></div>                      
   </div>
     <div id="tabs-4">
         
-                            <div id="reportsViews"></div>
-                            
+                            <div id="table1"></div>
+                             <div id="table2"></div>
+                             <div class="read_r"><a href="<?php echo site_url('welcome/embededtables');?>">more</a></div>
     </div>
     <div id="tabs-5">
      <ul>
@@ -118,6 +123,7 @@ jQuery(document).ready(function() {
                                     <li><a href="http://apps.dhis2.org/demo/api/reportTables/GXG56cBuqcm/data.html">ANC Visits Fixed and Outreach</a> | <a href="http://apps.dhis2.org/demo/api/reportTables/GXG56cBuqcm/data.pdf">PDF</a> 
                                     | <a href="http://apps.dhis2.org/demo/api/reportTables/GXG56cBuqcm/data.xls">XLS</a> | <a href="http://apps.dhis2.org/demo/api/reportTables/GXG56cBuqcm/data.csv">CSV</a></li>
                                </ul>
+        <div class="read_r"><a href="<?php echo site_url('welcome/reportTables');?>">more</a></div>
     </div>
 </div>
 

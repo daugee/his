@@ -10,13 +10,7 @@ class Welcome extends CI_Controller {
               $this->load->library('javascript');
               $this->load->library('pagination');
 
-                $config['base_url'] = 'http://localhost/his/index.php/welcome/blog';
-                $config['total_rows'] = 200;
-                $config['per_page'] = 20; 
-
-                $this->pagination->initialize($config); 
-
-                echo $this->pagination->create_links();
+                
               }
             
 
@@ -49,6 +43,22 @@ class Welcome extends CI_Controller {
             
                         $this->load->view('test');
         }
+        public function charts()
+	{
+		$this->load->view('charts');
+	}
+        public function embededtables()
+	{
+		$this->load->view('dhis/embededtables');
+	}
+        public function maps()
+	{
+		$this->load->view('dhis/maps');
+	}
+        public function reportTables()
+	{
+		$this->load->view('charts');
+	}
         
 }
 

@@ -4,8 +4,8 @@
 $url = 'http://test.hiskenya.org/api/reportTables.json?paging=false';
 
 
-$username = 'hi4kenya';
-$password = 'Hi4kenya';
+$username = 'admin';
+$password = 'district';
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
@@ -15,7 +15,7 @@ curl_setopt($ch, CURLOPT_USERPWD, $username . ":" . $password);
 curl_setopt($ch, CURLOPT_CONNECTTIMEOUT ,0); 
 curl_setopt($ch, CURLOPT_TIMEOUT, 0);  
 $output=curl_exec($ch);
-print "error:" . curl_error($ch) . "<br />";
+print "" . curl_error($ch) . "<br />";
 $data=(json_encode($output,true));
 ?>
 
