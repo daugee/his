@@ -9,7 +9,7 @@
                     
                     <div class="row">
                         <?php include 'includes/reportTables.php';?>
-                     	<div class=""><div id="reportTables" class="chart"></div></div>
+                     	<div class=""><div id="reportTables" ></div></div>
                         <div class="box_razd"></div>
                       	
                     </div>
