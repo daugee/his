@@ -68,5 +68,10 @@ class admin_model extends CI_Model {
         $insert= $this->db->insert('admin',$new_member_insert_data);
         return $insert;
     }
+    public function event_details(){
+         
+        $query=$this->db->get('event');
+        return $query->result();
+    }
 }
 ?>

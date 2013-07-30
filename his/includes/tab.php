@@ -27,5 +27,5 @@
       <a href="<?php echo site_url('welcome/gallery')?>"  class="but" title="">Counties</a>
       <a href="<?php echo site_url('welcome/about_us')?>"  class="but" title="">Resource</a>
       <a href="<?php echo site_url('welcome/contact_us')?>" class="but" title="">Contact us</a>
-    </div>
+     </div>
 </div>

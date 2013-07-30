@@ -8,6 +8,8 @@
 		<script type="text/javascript" src="<?php echo base_url('lib/jquery-1.3.2.min.js');?>"></script>
 		<script type="text/javascript" src="<?php echo base_url('lib/jquery.tools.js');?>"></script>	
 		<script type="text/javascript" src="<?php echo base_url('lib/jquery.custom.js');?>"></script>
+                <script type="text/javascript" src="<?php echo base_url('lib/pirobox.js');?>"></script>
+                
 <link rel="stylesheet" href="<?php echo base_url('css/styles.css');?>"  type="text/css" media="all"/>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>

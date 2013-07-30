@@ -41,29 +41,52 @@
                 	
                     <h1>Welcome To Kenya National Health Information Portal</h1>
                   <img src="<?php echo base_url('images/img11.jpg');?>" class="img_l" alt="" />
-                      <span class="span_cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span><br />
-                      Ut convallis rhoncus diam ut scelerisque. Nulla id mi ut augue laoreet commodo sed quis dolor. Aliquam sed arcu risus, non mattis nisi. Aenean urna tortor, consequat sed mattis eget, condimentum at lacus. Fusce elit nisl, vehicula ut interdum eget, faucibus ultricies turpis.<br />
-						Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla facilisi. Quisque sed dolor est, ut pulvinar nunc. Quisque nec arcu a orci scelerisque facilisis non vel ligula. Integer ultrices lacus sapien. Sed id leo magna, bibendum viverra enim. Integer pulvinar cursus consectetur. 
-               	  <div class="read_r"><a href="#">more</a></div><br />
+                      <span class="span_cont">Latest Events</span><br />
+                    <table width="60%" height align="right" id='customer'>    
+     <th>Title:  
+     </th>
+     <th>Period:  
+     </th>
+     <th>description:  
+     </th>
+     
+     <th>Organizers:  
+     </th>
+     
+            <?php foreach ($events as $detail): ?>
+                  <tr>
+                   <td> <?php echo $detail->title; ?> </td>		
+                  <td> <?php echo $detail->period; ?> </td>
+                   <td> <?php echo $detail->description; ?> </td>		
+                      <td> <?php echo $detail->organizers; ?> </td>	 
+                       </tr>  
+                     <?php endforeach;?>
+                    
+                    </table><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                      <div class="read_r"><a href="#">more</a></div><br />
                   <div class="razd_g"></div><br />
                 
-                      	<div class="col">
-                       	  <h1>Nunc tempus</h1>
-                          <img src="<?php echo base_url('images/col_img1.jpg')?>" class="img_l" alt="" />Nunc tempus libero dictum lectus pharetra pretium. Ut eu massa vitae magna porta  suada et ultrices vitae, commodo in velit. Etiam luctus rhoncus arcu, ac euismod leo feugiat vel. Morbi commodo nulla quis augue
-                          <div class="read_r"><a href="#">more</a></div>
+                      	  	<div class="col">
+                       	  <h1>VISION</h1>
+                          <img src="<?php echo base_url('images/col_img1.jpg');?>" class="img_l" alt="" />A nation free from preventable disease and ill health
+                          
                        		
                       	</div>
                   <div class="col_razd"></div>
                         <div class="col">
-                        	<h1 class="tit">Etiam luctus</h1>
-                            <img src="<?php echo base_url('images/col_img2.jpg');?>" class="img_l" alt="" />Etiam luctus rhoncus arcu, ac euismod leo feugiat vel. Morbi commodo nulla quis augue cus viverra. Nunc tempus justo non nibh auctor vehicula tempor tellus ullamcorper. Morbi vitae consequat velit. 
-                            <div class="read_r"><a href="#">more</a></div>
+                        	<h1 class="tit">MISSION</h1>
+                            <img src="<?php echo base_url('images/col_img2.jpg');?>" class="img_l" alt="" />To provide effective leadership and participate in provision of quality Public Health and Sanitation services that are: equitable, responsive, accessible and accountable to Kenyans.
+making to promote the health of the nation. 
+                            
                	  </div>
                   <div class="col_razd"></div>
                         <div class="col">
-                        	<h1 class="tit">Suspendisse quis</h1>
-                          <img src="<?php echo base_url('images/col_img3.jpg');?>" class="img_l" alt="" />Suspendisse quis ipsum a metus mattis pretium vitae et nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur urna odio, dapibus at mattis et, 
-                          <div class="read_r"><a href="#">more</a></div>
+                        	<h1 class="tit">Goals</h1>
+                          <img src="<?php echo base_url('images/col_img3.jpg');?>" class="img_l" alt="" />To reduce ill-health among people living in Kenya due to preventable causes 
+						  by strengthening the current public health interventions and embracing new innovations to foster economic growth. 
+						  <div class="read_r"><a href="lib/jquery.custom.js" class="read_more">more</a></div>
+						  <span class="span_dat">Strategic Thrusts Improving equitable access to public health and sanitation services Improving quality and responsiveness of public health and sanitation services Improving efficiency of public health and sanitation services Fostering partnership Improving financing to the Ministry of Public Health and Sanitation.
+						  </span>
                         
                	  </div>
                   <div style="clear: both"></div>

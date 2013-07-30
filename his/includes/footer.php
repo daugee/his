@@ -22,13 +22,15 @@
 
       	</div>
         <div id="b_col3">
-       	  <h1>Follow Us</h1>
-        	<ul>
-           	  	<li><img src="<?php echo base_url('images/fu_i1.gif');?>" class=" fu_i" alt="" /><a href="#">Lorem ipsum dolor</a></li>
+       	  <h1>NHIS Web portal Admin</h1>
+        	<!--<ul>-->
+                    <img src="<?php echo base_url('images/col_img3.jpg');?>" class="img_l" alt="" />Administrator main page: this is where the admin, 
+                          <div class="read_r"><a href="<?php echo site_url('welcome/admin_login')?>">Admin</a></div>
+<!--           	  	<li><img src="<?php echo base_url('images/fu_i1.gif');?>" class=" fu_i" alt="" /><a href="#">Lorem ipsum dolor</a></li>
                 <li><img src="<?php echo base_url('images/fu_i2.gif');?>" class=" fu_i" alt="" /><a href="#">Maecenas in turpis </a></li>
                 <li><img src="<?php echo base_url('images/fu_i3.gif');?>" class=" fu_i" alt="" /><a href="#">Morbi fringilla libero</a></li>
                 <li><img src="<?php echo base_url('images/fu_i4.gif');?>" class=" fu_i" alt="" /><a href="#">In venenatis metus vel </a></li>
-            </ul>
+            </ul>-->
       </div>
       <div id="b_col4">
       		<h1>Contact Information</h1>

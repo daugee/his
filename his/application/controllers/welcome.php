@@ -17,7 +17,9 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('index');
+            $data['events']=$this->admin_model->event_details();
+            $this->load->view('index', $data);
+                
 	}
         public function blog(){
             
