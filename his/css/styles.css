@@ -18,6 +18,18 @@ bottom:0px;
 margin-left: 5px;
 width:880px;
 }
+.slidingDiv {
+    height:300px;
+    background-color: #99CCFF;
+    padding:20px;
+    margin-top:10px;
+    border-bottom:5px solid #3399FF;
+}
+ 
+.show_hide {
+    display:none;
+}
+
 .chart {
   width: 800px;
   height: 500px;

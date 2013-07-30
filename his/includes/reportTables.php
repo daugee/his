@@ -15,7 +15,7 @@ curl_setopt($ch, CURLOPT_USERPWD, $username . ":" . $password);
 curl_setopt($ch, CURLOPT_CONNECTTIMEOUT ,0); 
 curl_setopt($ch, CURLOPT_TIMEOUT, 0);  
 $output=curl_exec($ch);
-print "" . curl_error($ch) . "<br />";
+
 $data=(json_encode($output,true));
 ?>
 

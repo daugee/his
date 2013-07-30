@@ -1,7 +1,21 @@
 <?php include 'includes/header.php';?>
-
-
 <?php include 'includes/tab.php';?>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+ 
+$(document).ready(function(){
+ 
+        $(".slidingDiv").hide();
+        $(".show_hide").show();
+ 
+    $('.show_hide').click(function(){
+    $(".slidingDiv").slideToggle();
+    });
+ 
+});
+ 
+</script>
+
 <!-- header ends -->
 <div class="top">
 	<div class="scrollable">
@@ -84,9 +98,13 @@ making to promote the health of the nation.
                         	<h1 class="tit">Goals</h1>
                           <img src="<?php echo base_url('images/col_img3.jpg');?>" class="img_l" alt="" />To reduce ill-health among people living in Kenya due to preventable causes 
 						  by strengthening the current public health interventions and embracing new innovations to foster economic growth. 
-						  <div class="read_r"><a href="lib/jquery.custom.js" class="read_more">more</a></div>
-						  <span class="span_dat">Strategic Thrusts Improving equitable access to public health and sanitation services Improving quality and responsiveness of public health and sanitation services Improving efficiency of public health and sanitation services Fostering partnership Improving financing to the Ministry of Public Health and Sanitation.
+						  <div class="read_r">
+                                                      <a href="#" class="show_hide">more</a>
+                                                        </div><div class="slidingDiv">
+                                                             <span class="span_dat">Strategic Thrusts Improving equitable access to public health and sanitation services Improving quality and responsiveness of public health and sanitation services Improving efficiency of public health and sanitation services Fostering partnership Improving financing to the Ministry of Public Health and Sanitation.
 						  </span>
+                             <a href="#" class="show_hide">less</a></div><a href="#" class="show_hide"></a>
+						 
                         
                	  </div>
                   <div style="clear: both"></div>

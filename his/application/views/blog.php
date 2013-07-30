@@ -1,11 +1,9 @@
-<?php include 'includes/connector.php';?>
-<?php include 'includes/header.php';?>
-<?php include 'includes/tab.php';?>
 
-<?php include 'includes/reportTables.php';?>
-<?php include 'includes/charts.php';?>
-<?php include 'includes/maps.php';?>
-<?php include 'includes/reportTablesViews.php';?>
+  
+
+<?php include 'includes/header.php';?>
+  <?php include 'includes/reports.php';?>
+<?php include 'includes/tab.php';?>
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
@@ -67,15 +65,16 @@ jQuery(document).ready(function() {
     <li><a href="#tabs-3">charts</a></li>
     <li><a href="#tabs-4">Embedded tables</a></li>
     <li><a href="#tabs-5">Reports Tables</a></li>
+    <li><a href="#tabs-6">Indicator Groups</a></li>
   </ul>
   <div id="tabs-1">
-   <div class="datc_comment">
-       <?php include 'includes/reports.php';?>
-                              <div class="date"><img src="<?php echo base_url('images/fish_dat.gif');?>" style=" " alt="" />&nbsp;&nbsp;<a href="#"><?php echo date('l jS \of F Y h:i:s A');?></a></div>
+  
+   <div class="datc_comment">      
+             <div class="date"><img src="<?php echo base_url('images/fish_dat.gif');?>" style=" " alt="" />&nbsp;&nbsp;<a href="#"><?php echo date('l jS \of F Y h:i:s A');?></a></div>
                                <!--- <div class="bloger"><img src="<?php echo base_url('images/fish_bloger.gif');?>" style=" vertical-align:middle" alt="" />&nbsp;&nbsp;<a href="#">by John Johnson</a></div>
                                 <div class="comment"><img src="<?php echo base_url('images/fish_comment.gif');?>" style=" vertical-align:middle" alt="" />&nbsp;&nbsp;<a href="#">12 Comments </a></div>
                           -->
-                               </div>
+          </div>
                            <div style=" height:5px"></div>
 
                            <ul>
@@ -124,6 +123,12 @@ jQuery(document).ready(function() {
                                     | <a href="http://apps.dhis2.org/demo/api/reportTables/GXG56cBuqcm/data.xls">XLS</a> | <a href="http://apps.dhis2.org/demo/api/reportTables/GXG56cBuqcm/data.csv">CSV</a></li>
                                </ul>
         <div class="read_r"><a href="<?php echo site_url('welcome/reportTables');?>">more</a></div>
+    </div>
+    <div id="tabs-6">
+        
+                            <div id="indicatorGroups"><?php include 'includes/indicatorGroups.php';?></div>
+                             <div id="table2"></div>
+                             <div class="read_r"><a href="<?php echo site_url('welcome/embededtables');?>">more</a></div>
     </div>
 </div>
 
