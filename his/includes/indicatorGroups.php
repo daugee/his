@@ -1,9 +1,9 @@
 <?php
 
-$ur = "http://apps.dhis2.org/demo/api/indicatorGroups.json?paging=false";
+$ur = "http://test.hiskenya.org/api/indicatorGroups.json?paging=false";
 
-$username = 'admin';
-$password = 'district';
+$username = 'hi4kenya';
+$password = 'Hi4kenya';
 
 $ch1 = curl_init();
 curl_setopt($ch1, CURLOPT_URL, $ur);

@@ -9,7 +9,7 @@
                         
                         <div id="left">
                             <h2>Contact Us</h2>
-                            <span class=" span_cont"><img src="<?php echo base_url('images/img51.jpg');?>" class="img_l" alt="" />The ministry of Health Kenya</span><br />
+                            <span class=" span_cont"><img  style="height:96px;width:96px" src="<?php echo base_url(); ?>images/moh_large.png" class="img_l" alt="" />The ministry of Health Kenya</span><br />
                           Fusce at tortor est. Morbi eget leo vitae nibh aliquam elementum in id mauris. Fusce in elit nec lectus mollis bibendum. Integer eu lectus at tortor vestibulum rutrum. Pellentesque rutrum, ipsum eu adipiscing ornare, elit erat dignissim mi, vitae feugiat orci mi a dolor. Maecenas  nulla risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos.
                           <div style="height:10px"></div>
                        		<div style="height:8px"></div>

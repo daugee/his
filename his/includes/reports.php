@@ -1,11 +1,11 @@
 
 <?php
 
-$url = 'http://apps.dhis2.org/demo/api/reports.json?paging=false';
+$url = 'http://test.hiskenya.org/api/reports.json?paging=false';
 
 
-$username = 'admin';
-$password = 'district';
+$username = 'hi4kenya';
+$password = 'Hi4kenya';
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);

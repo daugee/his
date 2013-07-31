@@ -1,4 +1,4 @@
-<?php include 'includes/header.php';?>
+t<?php include 'includes/header.php';?>
 <link rel="stylesheet" href="<?php echo base_url('css/styles.css');?>"  type="text/css" media="all"/>
 <?php include 'includes/tab.php';?>
 <!-- header ends -->
@@ -8,56 +8,71 @@
                 	<div id="content_razd">
                     
                    	  <div id="left">
-                         <h2>Resources</h2>
-                         <img src="<?php echo base_url('images/img41.jpg');?>" class="img_l" alt="" /><span class="span_cont">HIS Tools </span><br />
-							Sed tincidunt urna sit amet mauris tempus varius id a turpis. Curabitur sit amet nulla gravida lectus tincidunt sagittis nec eget nunc. Maecenas id euismod risus. Nam ultrices elit nec odio ullamcorper ut commodo arcu scelerisque. Integer malesuada condimentum metus a malesuada. Aliquam nulla velit, adipiscing non facilisis id, justo euismod lorem, sit amet iaculis lectus ante sit amet odio. Vivamus vestibulum consectetur<br />
-                        <div class="about_razd"></div>
-							<h2>Integer adipiscing</h2>
-                            <div class="about_cols">
-                           	  <div class="about_col_l">
-                               	<img src="<?php echo base_url('images/img42.jpg');?>" class="img_l" alt="" /><span class="span_cont">Sed at viverra ligula. </span>Maecenas sit amet odio at lorem ultrices varius. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque nisi ipsum, tincidunt at egestas id, sodales et mi. 
-                                	<div class="read_r"><a href="#">more</a></div>
-                              </div>
+                         <h2>EVENTS</h2>
+                         <div style=" height:5px"></div>
+                            <?php foreach ($events as $detail): ?>
+                            	<span class="span_cont">TITLE </span><br />
                                 
-                                <div style="height:15px; width:34px; float:left;"></div>
+                                   <?php echo $detail->title; ?><br />
+                                <span class="span_cont">PERIOD </span><br />
+                                <?php echo $detail->period; ?><br />
+                                <span class="span_cont">ORGANIZERS </span><br />
+                                <?php echo $detail->organizers; ?><br />
+                                <span class="span_cont">DESCRIPTION </span><br />
+                                <?php echo $detail->description; ?><br />
+                                <div class="read_r"><a href="" target="_blank">more</a></div>
                                 
-                                <div class="about_col_l">
-                               	  <img src="<?php echo base_url('images/img43.jpg');?>" class="img_l" alt="" /><span class="span_cont">Mauris in laoreet nisi. </span>Sed id lacus at orci pulvinar volutpat sed nec arcu. Etiam nec nisi mi, nec placerat ante. Mauris eget augue turpis, nec sceleris nec scelerisque felis. In hac habitasse platea dictumst. Duis nec leo quis
-                                    <div class="read_r"><a href="#">more</a></div>
-                              </div>
-                            	<div style="clear: both"></div>
-                            </div>
-                            <div class="about_razd"></div>
+                            <div style=" height:15px"></div>
+                              <?php endforeach;?>
+<!--                         <img src="<?php echo base_url('images/img41.jpg');?>" class="img_l" alt="" /><span class="span_cont">Events </span><br />-->
+			
                             
                             
                         </div>
                          <div id="right">
-                            <h2>Company News</h2>
+                            <h2>Quick Links</h2>
                            <div style=" height:5px"></div>
                             
                             
-                            <div class="dat_about">Apr. 11, 2011</div>
-								<img src="<?php echo base_url('images/img44.jpg');?>" alt="" />
+                        
+								<a href="http://www.hiskenya.org" target="_blank"><img src="<?php echo base_url('images/dhis2-logo.jpg');?>" alt="" /></a>
                            <div style=" height:5px"></div>
                             
-                            	<span class="span_cont">Suspendisse rutrum interdum lacinia. </span><br />
-
+                            	<span class="span_cont">District Health Information Software. </span><br />
+                                   District Health Information Software – Version 2
                                 
-                                Suspendisse tempus aliquet elit sit amet pellentesque. Donec iaculis pulvinar mauris, ac vulputate justo pretium quis. Morbi id magna ac t 
-                                <div class="read_r"><a href="#">more</a></div>
+                                
+                                Database of all registered and approved community units in the country; an extension of the Master Facility List, Ministry of Health.
+                                <div class="read_r"><a href="http://www.hiskenya.org" target="_blank">more</a></div>
                                 
                             <div style=" height:15px"></div>
-                            <div class="dat_about">Apr. 10, 2011</div>
+                            
+                            
+                                                       
+		<a href="https://demo.kenyaemr.org" target="_blank">
+			<img src="<?php echo base_url('images/kenyaemr.png');?>" width="48" height="48" />
+		</a>
+	
+	
+		<span style="font-size: 24px;">KenyaEMR</span>
+		
                            		<div style=" height:5px"></div>
-                            	<span class="span_cont">Duis a molestie massa. </span><br />
-                            	Nullam imperdiet vulputate volutpat. Nunc consectetur mattis accumsan. Etiam adipiscing leo in risus semper ac lacinia quam malesuada.
-                           <div class="read_r"><a href="#">more</a></div> <div style=" height:5px"></div>
+                            	
+                                KenyaEMR is a collaborative open source project to develop software to support the delivery of health care in Kenya
+                            	<div class="read_r"><a href="https://demo.kenyaemr.org/" target="_blank">more</a></div> <div style=" height:5px"></div>
+                            
+                           <a href="http://www.ehealth.or.ke/facilities/" target="_blank"> <img src="<?php echo base_url('images/ehealth-kenya-logo.jpg');?>" alt="" /></a>
+                           		<div style=" height:5px"></div>
+                            	<span class="span_cont">Master Facility List </span><br />
+                                The Division of Health Information System wishes to improve the Master Facitly List. This will be used for planning puposes and even be useful in the new software, District Health Information Software( DHIS)
+                            	<div class="read_r"><a href="http://www.ehealth.or.ke/facilities/" target="_blank">more</a></div> <div style=" height:5px"></div>
                            
-                           <div class="dat_about">Apr. 9, 2011</div>
+                           
+                          <a href="http://www.ehealth.or.ke/mcul/" target="_blank"> <img src="<?php echo base_url('images/ehealth-kenya-logo.jpg');?>" alt="" /></a>
                            		<div style=" height:5px"></div>
-                            	<span class="span_cont">Sed sodales accumsan fermentum.</span><br />
-                            	Mauris tortor tortor, rutrum in lacinia ac, conse- quat quis nisi. Vestibulum non tortor magna,
-                           <div class="read_r"><a href="#">more</a></div>
+                            	<span class="span_cont">Master Community Units List</span><br />
+                            	Database of all registered and approved community units in the country; an extension of the Master Facility List, Ministry of Health.
+                                <div class="read_r"><a href="http://www.ehealth.or.ke/mcul/" target="_blank">more</a></div>
                             
                             <div style=" height:5px"></div>
                            

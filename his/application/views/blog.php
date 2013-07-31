@@ -21,21 +21,21 @@
         
 <script type="text/javascript">
 
-var base = "http://apps.dhis2.org/demo/";
+var base = "http://test.hiskenya.org/";
 
 
 
 function setLinks() {
     
-  jQuery("#map1").attr("src", base + "api/mapViews/tzgP0pacw8l/data");
-  jQuery("#map2").attr("src", base + "api/mapViews/tWOaOFS3WB5/data");
-  jQuery("#chart1").attr("src", base + "api/charts/mKjgsRMJt0H/data");
-  jQuery("#chart2").attr("src", base + "api/charts/wSWxbt3TueB/data");
-  jQuery("#table1").load(base + "api/reportTables/NBt7kGTOQTb/data.pdf");
-  jQuery("#table2").attr(base + "api/reportTables/NBt7kGTOQTb/data");
-var anchor = $("<iframe></iframe>").attr("src",'http://apps.dhis2.org/demo/api/reportTables/NBt7kGTOQTb/data.html').attr("height",780).attr("width",780).append("<br />"); 
+  jQuery("#map1").attr("src", base + "api/mapViews/Om7R4Y4xSfX/data");
+  jQuery("#map2").attr("src", base + "api/mapViews/cLEOY7D8rFm/data");
+  jQuery("#chart1").attr("src", base + "api/charts/fNzZOUER6vK/data");
+  jQuery("#chart2").attr("src", base + "api/charts/NQAqUVsjTPh/data");
+ // jQuery("#table1").load(base + "api/reportTables/NBt7kGTOQTb/data.pdf");
+ // jQuery("#table2").attr(base + "api/reportTables/NBt7kGTOQTb/data");
+var anchor = $("<iframe></iframe>").attr("src",'http://test.hiskenya.org/api/reportTables/wrCrHx1YzM3/data.html').attr("height",550).attr("width",780).append("<br />"); 
 $("#table1").append(anchor).load();
-var anchor = $("<iframe></iframe>").attr("src",'http://apps.dhis2.org/demo/api/reportTables/FPmvWs7bn2P/data.html').attr("height",780).attr("width",780).append("<br />"); 
+var anchor = $("<iframe></iframe>").attr("src",'http://test.hiskenya.org/api/reportTables/AeQc26EECQc/data.html').attr("height",550).attr("width",780).append("<br />"); 
 $("#table2").append(anchor).load();
  
 
@@ -83,8 +83,8 @@ jQuery(document).ready(function() {
   </div>
   <div id="tabs-2">
       <div id="maps"></div>
-                            <img style="padding: 5px; margin: 5px; border: 1px solid #c0c0c0; width: 400px" id="map1" />
-                            <img style="padding: 15px; margin: 15px; border: 1px solid #c0c0c0; width: 400px" id="map2" />
+                            <img style="padding: 5px; margin: 5px; border-style:solid; border-width: 1px; border: 1px solid #c0c0c0; width: 400px" id="map1" />
+                            <img style="padding: 15px; margin: 15px; border-style:solid; border-width: 1px; border: 1px solid #c0c0c0; width: 400px" id="map2" />
   <div class="read_r"><a href="<?php echo site_url('welcome/maps');?>">more</a></div>
   </div>
   <div id="tabs-3">

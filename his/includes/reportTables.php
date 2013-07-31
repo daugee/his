@@ -4,8 +4,8 @@
 $url = 'http://test.hiskenya.org/api/reportTables.json?paging=false';
 
 
-$username = 'admin';
-$password = 'district';
+$username = 'hi4kenya';
+$password = 'Hi4kenya';
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);

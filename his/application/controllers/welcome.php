@@ -17,8 +17,8 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-            $data['events']=$this->admin_model->event_details();
-            $this->load->view('index', $data);
+            
+            $this->load->view('index');
                 
 	}
         public function blog(){
@@ -34,8 +34,8 @@ class Welcome extends CI_Controller {
                         $this->load->view('connection');
         }
         public function about_us(){
-            
-                        $this->load->view('about_us');
+            $data['events']=$this->admin_model->event_details();
+                        $this->load->view('about_us',$data);
         }
         public function contact_us(){
             

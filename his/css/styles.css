@@ -728,25 +728,32 @@ float: left;}
 .header1
 {
 width: 880px; height: 311px;
-background: url(../images/header1.jpg) no-repeat;
+background: url(../images/Photos/header1.jpg) no-repeat;
 }
 
 .header2
 {
 width: 880px; height: 311px;
-background: url(../images/header2.jpg) no-repeat;
+background: url(../images/Photos/header2.jpg) no-repeat;
 }
-
+#events
+{
+width: 876px;
+margin: 0px auto;
+background: #E6F6FF;
+padding: 0px 12px 5px 12px;
+line-height: 22px;
+}
 .header3
 {
 width: 880px; height: 311px;
-background: url(../images/header3.jpg) no-repeat;
+background: url(../images/Photos/header3.jpg) no-repeat;
 }
 
 .header4
 {
 width: 880px; height: 311px;
-background: url(../images/header4.jpg) no-repeat;
+background: url(../images/Photos/header4.jpg) no-repeat;
 }
 
 /*

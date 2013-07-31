@@ -15,8 +15,6 @@ $(document).ready(function(){
 });
  
 </script>
-
-<!-- header ends -->
 <div class="top">
 	<div class="scrollable">
 				<div class="items">
@@ -52,32 +50,14 @@ $(document).ready(function(){
         <!-- content begins -->
         		<div id="content_top"></div>
        			<div id="content">
-                	
-                    <h1>Welcome To Kenya National Health Information Portal</h1>
+                            <h1>Welcome To Kenya National Health Information System</h1>
                   <img src="<?php echo base_url('images/img11.jpg');?>" class="img_l" alt="" />
-                      <span class="span_cont">Latest Events</span><br />
-                    <table width="60%" height align="right" id='customer'>    
-     <th>Title:  
-     </th>
-     <th>Period:  
-     </th>
-     <th>description:  
-     </th>
-     
-     <th>Organizers:  
-     </th>
-     
-            <?php foreach ($events as $detail): ?>
-                  <tr>
-                   <td> <?php echo $detail->title; ?> </td>		
-                  <td> <?php echo $detail->period; ?> </td>
-                   <td> <?php echo $detail->description; ?> </td>		
-                      <td> <?php echo $detail->organizers; ?> </td>	 
-                       </tr>  
-                     <?php endforeach;?>
-                    
-                    </table><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-                      <div class="read_r"><a href="#">more</a></div><br />
+                      <span class="span_cont"></span><br />
+                        National health information system it's main objective is To provide timely, reliable and accessible quality health service information for evidence based decision making in order to maximize 
+utilization of scarce resources in the health sector and also be Be a centre of excellence for quality health and health-related data and information for use by all
+<br /><br/>
+<a href='<?php echo site_url('welcome/about_us')?>'style='font-style: italic; color: blue;'>CHECK LATEST EVENTS HER</a>
+<div class="read_r"><a href="<?php echo site_url('welcome/about_us')?>">Events</a></div><br />
                   <div class="razd_g"></div><br />
                 
                       	  	<div class="col">
@@ -107,6 +87,7 @@ making to promote the health of the nation.
 						 
                         
                	  </div>
+                  
                   <div style="clear: both"></div>
                   <div style="height:15px; width: 100%"></div>
                   <div class="razd_g"></div>

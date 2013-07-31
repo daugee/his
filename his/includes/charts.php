@@ -1,11 +1,11 @@
 
 <?php
 
-$url = 'http://apps.dhis2.org/demo/api/charts.json?paging=false';
+$url = 'http://test.hiskenya.org/api/charts.json?paging=false';
 
 
-$username = 'admin';
-$password = 'district';
+$username = 'hi4kenya';
+$password = 'Hi4kenya';
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
@@ -37,7 +37,7 @@ json=jQuery.parseJSON(my_var);
 				FACILITY_CODE.push(data.png);
 				FACILITY_LEVEL.push(data.href);
 				FACILITY_ID.push(data.id);
-                                var anchor = $("<iframe></iframe>").attr("src",data.href+'/data.html').append("<br />"); 				  
+                                var anchor = $("<iframe></iframe>").attr("src",data.href+'/data.html').attr("height",550).attr("width",780).append("<br />"); 				  
 									 
                                         
                                         $("#charts").append(anchor).load();
