@@ -73,5 +73,31 @@ class admin_model extends CI_Model {
         $query=$this->db->get('event');
         return $query->result();
     }
+    public function get_all_events()
+    {
+        //$this->db->where('travel_id',$id);
+        $query=$this->db->get('event');
+        return $query->result();
+    }
+     public function events_edit()
+    {
+       
+       
+        $data=array(
+            'title'=>$this->input->post('title'),
+            'period'=>$this->input->post('period'),
+            'organizers'=>$this->input->post('organizers'),
+            'description'=>$this->input->post('description')
+        );
+        
+        $this->db->where('id',  $this->input->post('id'));
+        $this->db->update('event',$data);
+    }
+    public function events_delete()
+    {
+        $this->db->where('id',  $this->input->post('id'));
+        $this->db->delete('event');
+        
+    }
 }
 ?>

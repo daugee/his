@@ -13,8 +13,22 @@ $(document).ready(function(){
     });
  
 });
+$('.scrollable').jsizedCarousel({
+    // size of the biggest slide
+    front : {
+        width: 350,
+        height: 250
+    },
+    // delay between slide changes
+    changeInterval: 5,
+    // distance between slides in px
+    distanceBetween: 25,    
+    // determinies how much the slides sizes decrease
+    sizeDecrease : 0.2    
+});
  
 </script>
+
 <div class="top">
 	<div class="scrollable">
 				<div class="items">

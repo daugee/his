@@ -1,19 +1,44 @@
-<?php include'includes/header.php';?>
 
-<?php include'includes/tab.php';?>
-<!-- content begins -->
-        		<div id="content_top"></div>
+<?php include 'includes/header.php';?>
+  <?php include 'includes/reports.php';?>
+<?php include 'includes/tab.php';?>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css" />
+<script type="text/javascript">
+    $(function() {
+                $("#tabs").tabs({collapsible: true}).addClass('ui-tabs-horizontal ui-helper-clearfix');
+		$("#tabs li").removeClass('ui-corner-top').addClass('ui-corner-right');
+		
+	});
+	</script>
+        <script>
+
+</script>
+             <div id="content_top"></div>
        			<div id="content">
                 	<div id="content_razd">
-                    	
-
-<div id="left">
-                            <h2>Contact Us</h2>
-                            <span class=" span_cont"><img  style="height:96px;width:96px" src="<?php echo base_url(); ?>images/moh_large.png" class="img_l" alt="" />The ministry of Health Kenya</span><br />
-                          Fusce at tortor est. Morbi eget leo vitae nibh aliquam elementum in id mauris. Fusce in elit nec lectus mollis bibendum. Integer eu lectus at tortor vestibulum rutrum. Pellentesque rutrum, ipsum eu adipiscing ornare, elit erat dignissim mi, vitae feugiat orci mi a dolor. Maecenas  nulla risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos.
-                          <div style="height:10px"></div>
-                       		<div style="height:8px"></div>
-                           <?php  echo form_open('admin/validate'); ?>
+        <div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Add Events</a></li>
+    <li><a href="#tabs-2"><?php echo anchor('welcome/admin_events', 'Edit Events'); ?></a></li>
+     <li><a href="#tabs-2"><?php echo anchor('welcome/delete_events', 'Delete Events'); ?></a></li>
+    <li><a href="#tabs-3"><?php echo anchor('welcome/logout', 'LOGOUT'); ?></a></li>
+    
+  </ul>
+  <div id="tabs-1">
+  
+   <div class="datc_comment">      
+             <div class="date"><img src="<?php echo base_url('images/fish_dat.gif');?>" style=" " alt="" />&nbsp;&nbsp;<a href="#"><?php echo date('l jS \of F Y h:i:s A');?></a></div>
+                                        </div>
+                           <div style=" height:5px"></div>
+            
+                            <h2>Add Events</h2>
+                           <?php  echo form_open('welcome/validate'); ?>
+                           
                                   <div>
                                       <label class="control-label" for="title">Event Title : </label>
             
@@ -22,7 +47,7 @@
                                   </div>
                                   <div style="height:5px"></div>
                                   <div>
-                                      <label class="control-label" for="author">Period : </label>
+                                      <label class="control-label" for="author">Period :&nbsp;&nbsp;&nbsp; </label>&nbsp;&nbsp;&nbsp;
                                       <input class="input_txt2" type="text" name="period" value="<?php echo set_value('period'); ?>" placeholder="Event Period"/>
                                       <span class="site-error"><?php echo form_error('period'); ?></span>
                                   </div>
@@ -42,65 +67,29 @@
                               <div>
                                 <input class="submit2" name="Submit" type="submit" value="SUBMIT" />
                                 &nbsp;&nbsp;
-                              <input class="submit2" style="margin: 0px 0px 0px 420px;" name="Submit2" type="submit" value="RESET" />
+                                
+                              <input class="submit2" style="margin: 0px 0px 0px 420px;" name="Submit2" type="reset" value="RESET" />
                               </div>
+                                    
                          <?php echo form_close(); ?> 
-                        
-                     </div>
-<div id="right">
-                            <h2>Find Us</h2>
-                                <div style="height:8px"></div>
-                                <img src="<?php echo base_url('images/img52.jpg');?>" alt="" /><br />
-                           <div style="height:3px"></div><br />
-                                
-                                <h2>Meet Our Company</h2> 
-                               <div style="height:10px"></div>
-                                    <div  class="box_us">
-                                      <div  class="box_us_l">
-                                        <img src="<?php echo base_url('images/fish_us1.gif');?>" alt="" />
-                                      </div>
-                                        <div  class="box_us_r">
-                                            P.O BOX:30016-00100 <br /> Cathedral Road, Nairobi, Kenya
-                                      </div>
-                                        <div style="clear: both; height:10px;"></div>
-                               </div>
-                                
-                                <h2>Call us via Phone</h2> 
-                                <div style="height:10px"></div>
-                                <div  class="box_us">
-                                    <div  class="box_us_l">
-                                        <img src="<?php echo base_url('images/fish_us2.gif');?>" alt="" />
-                                    </div>
-                                    <div  class="box_us_r">
-                                      Phone:  +254-20-2717077  <br />
-                                        Fax: 1(234) 567 8910
-                                    </div>
-                                    <div style="clear: both; height:10px;"></div>
-                                </div>
-                                
-                                <h2>Emails</h2> 
-                                <div style="height:10px"></div>
-                                <div  class="box_us">
-                                    <div  class="box_us_l">
-                                        <img src="<?php echo base_url('images/fish_us3.gif');?>" alt="" />
-                                    </div>
-                                    <div  class="box_us_r">
-                                        General: psph@health.go.ke <br />
-                                        Support: support@yahoo.com
-                                    </div>
-                                    <div style="clear: both; height:10px;"></div>
-                                </div>
+                                     
+  </div>
+  <div id="tabs-2">
+    <div><?php echo anchor('welcome/admin_events', 'Edit Events'); ?></div>
+                             
+  
+  </div>
+  <div id="tabs-3">
+     
+
+     
                          
-                      </div>
-                    
-                      
-                          
-                      <div style="clear: both"></div>
-                 
-                 
+  </div>
+    
         			</div>
-                </div>
-                <div id="content_bot"></div>
+                        </div>
+                        </div>
+              <div id="content_bot"></div>
     <!-- content ends --> 
     <div style="height:15px; width: 100%"></div>
     <!-- bottom begin -->
